@@ -3,27 +3,14 @@
 </address>
 <div>
   <h3>Technology</h3>
-  <ul>
-    <li *ngFor="let t of technologies">{{ t }}</li>
-  </ul>
+  <table>
+    <tr *ngFor="let tr of technologies">
+      <td>{{ tr.a }}</td>
+      <td>{{ tr.b }}</td>
+      <td>{{ tr.c }}</td>
+      <td>{{ tr.d }}</td>
+    </tr>
+  </table>
 </div>
-<div>
-  <h3>Work History</h3>
-  <div *ngFor="let wh of workHistories">
-      <span>{{ wh.name }}</span> | 
-      <span>{{ wh.role }}</span> |
-      <span>{{ wh.location }}</span> | 
-      <span>{{ wh.duration }}</span>
-      <ul>
-        <li *ngFor="let acc of wh.accomplishments">{{ acc }}</li>
-      </ul>
-  </div>
-</div>
-<div>
-  <h3>Education</h3>
-  <p *ngFor="let e of education">
-    <span>{{ e.school }}</span> |
-    <span>{{ e.degree }}</span> |
-    <span>{{ e.gradyear }}</span>
-  </p>
-</div>
+<app-work-experience></app-work-experience>
+<app-education></app-education>
